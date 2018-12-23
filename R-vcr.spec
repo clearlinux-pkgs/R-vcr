@@ -4,7 +4,7 @@
 #
 Name     : R-vcr
 Version  : 0.2.0
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/vcr_0.2.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcr_0.2.0.tar.gz
 Summary  : Record 'HTTP' Calls to Disk
