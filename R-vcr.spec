@@ -4,20 +4,32 @@
 #
 Name     : R-vcr
 Version  : 0.2.6
-Release  : 11
+Release  : 12
 URL      : https://cran.r-project.org/src/contrib/vcr_0.2.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcr_0.2.6.tar.gz
 Summary  : Record 'HTTP' Calls to Disk
 Group    : Development/Tools
 License  : MIT
-Requires: R-base64enc
-Requires: R-crul
-Requires: R-lazyeval
-Requires: R-webmockr
+Requires: R-Rcpp
+Requires: R-curl
+Requires: R-httpcode
+Requires: R-httr
+Requires: R-jsonlite
+Requires: R-triebeard
+Requires: R-urltools
+Requires: R-yaml
+BuildRequires : R-Rcpp
 BuildRequires : R-base64enc
 BuildRequires : R-crul
+BuildRequires : R-curl
+BuildRequires : R-httpcode
+BuildRequires : R-httr
+BuildRequires : R-jsonlite
 BuildRequires : R-lazyeval
+BuildRequires : R-triebeard
+BuildRequires : R-urltools
 BuildRequires : R-webmockr
+BuildRequires : R-yaml
 BuildRequires : buildreq-R
 
 %description
@@ -39,10 +51,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549988952
+export SOURCE_DATE_EPOCH=1552922220
 
 %install
-export SOURCE_DATE_EPOCH=1549988952
+export SOURCE_DATE_EPOCH=1552922220
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
