@@ -4,7 +4,7 @@
 #
 Name     : R-vcr
 Version  : 0.5.4
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/vcr_0.5.4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcr_0.5.4.tar.gz
 Summary  : Record 'HTTP' Calls to Disk
@@ -29,33 +29,26 @@ BuildRequires : R-yaml
 BuildRequires : buildreq-R
 
 %description
-vcr
-===
-[![cran checks](https://cranchecks.info/badges/worst/vcr)](https://cranchecks.info/pkgs/vcr)
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Build Status](https://travis-ci.org/ropensci/vcr.svg)](https://travis-ci.org/ropensci/vcr)
-[![Build status](https://ci.appveyor.com/api/projects/status/6sewc0t3bhdg5opo?svg=true)](https://ci.appveyor.com/project/sckott/vcr)
-[![codecov](https://codecov.io/gh/ropensci/vcr/branch/master/graph/badge.svg)](https://codecov.io/gh/ropensci/vcr)
-[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/vcr)](https://github.com/metacran/cranlogs.app)
-[![cran version](https://www.r-pkg.org/badges/version/vcr)](https://cran.r-project.org/package=vcr)
+future runs. A port of the Ruby gem of the same name
 
 %prep
 %setup -q -c -n vcr
+cd %{_builddir}/vcr
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1585697566
+export SOURCE_DATE_EPOCH=1589773073
 
 %install
-export SOURCE_DATE_EPOCH=1585697566
+export SOURCE_DATE_EPOCH=1589773073
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
