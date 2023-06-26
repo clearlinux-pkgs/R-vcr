@@ -1,8 +1,8 @@
 # This file contains recursive sources that require this package
 R-bold
+R-gfonts
 R-natserv
 R-ritis
 R-rredlist
 R-taxize
 R-wikitaxa
-R-worrms
